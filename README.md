@@ -52,7 +52,7 @@ Tailwind CSS: utilização de classes utilitárias para construção da interfac
 ## **Equipe**
 
 [Ruan Both](https://github.com/2rascode)
-[David Sulbaran](https://github.com/...)
+[David Sulbaran](https://github.com/Davidalcantara-coder)
 
 *Instituição:* **Universidade Federal da Fronteira Sul (UFFS)**
 *Ano:* **2026**
