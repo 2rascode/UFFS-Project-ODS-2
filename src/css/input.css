@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* LAYERS FEITOS PELOS ALUNOS, PEÇO POR DEUS QUE O PROFESSOR NÃO ACHE QUE ISSO TEVE AUXILIO DE IA!
+OBS: Enquanto isso Github Copilot me tormenta */
+
+@font-face {
+    font-family: "milesdane";
+    src: url("../assets/fonts/MilesdaneRegular.woff") format("woff"),
+         url("../assets/fonts/MilesdaneRegular.woff2") format("woff2"); /* fallback */
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+  --font-serif: 'Sagoe UI', sans-serif; /* padrão */
+  --font-milesdane: 'milesdane', sans-serif; /* títulos */
+  --font-arial: 'Arial', sans-serif; /* parágrafos */
+}

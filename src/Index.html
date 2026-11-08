@@ -1,1 +1,60 @@
-!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+<body>
+    <!-- NavBar: DaisyUI -->
+    <header class="flex flex-col items-center justify-center w-full fixed top-0 z-50">
+        <div class="navbar bg-base-100 shadow-sm">
+            <div class="navbar-start">
+                <img src="./assets/img/mapa_solidario.webp" alt="logo do site" class="h-16 w-16 mr-2">
+                <h1 class="text-2xl font-bold font-milesdane">Mapa Solidário</h1>
+            </div>
+            <div class="navbar-center"></div>
+            <div class="navbar-end">
+                <div class="dropdown dropdown-left">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                        <svg aria-label="Menu" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 m-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
+                    </div>
+                    <ul
+                        tabindex="-1"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a>Página Inicial</a></li>
+                        <li><a>Adicionar Iniciativa</a></li>
+                        <li><a>Sobre</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- -->
+
+    <!-- Main -->
+    <main class="relative isolate flex min-h-screen flex-col items-center justify-center overflow-hidden">
+        <video class="absolute inset-0 h-full w-full object-cover" autoplay muted loop playsinline aria-hidden="true">
+            <source src="./assets/video/bg_video.mp4" type="video/mp4">
+        </video>
+        <div class="pointer-events-none absolute inset-0 z-10 bg-amber-200/50 backdrop-blur-sm" aria-hidden="true"></div>
+        <div class="relative z-20 flex flex-col items-center px-4 text-center">
+            <h1 class="mt-1 font-serif text-4xl font-bold">Bem-vindo ao</h1><h1 class="mt-1 text-9xl font-milesdane">Mapa Solidário</h1>
+            <p class="mt-4 text-lg font-arial">Encontre e compartilhe informações sobre iniciativas solidárias em sua comunidade.</p>
+            <div class="mt-6">
+                <a href="#" class="btn font-arial bg-amber-300 hover:bg-amber-400 text-amber-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /> </svg>
+                    Explorar Mapa
+                </a>
+                <a href="#" class="btn ml-4 font-arial bg-amber-700 hover:bg-amber-800 text-amber-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /> </svg>
+                    Buscar Iniciativas
+                </a>
+            </div>
+        </div>
+    </main>
+    <!-- -->
+
+</body>
+</html>
