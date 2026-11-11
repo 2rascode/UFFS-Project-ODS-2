@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="570" viewBox="0 0 760 570" role="img" aria-labelledby="titulo descricao" lang="pt-BR">
+<title id="titulo">Quase 1 em cada 4 lares foi afetado</title>
+<desc id="descricao">Em 2024, 18,9 milhões de domicílios brasileiros, ou 24,2%, tinham algum grau de insegurança alimentar. 3,2% do total estavam no nível grave, cerca de 2,5 milhões de domicílios. 21,0% tinham insegurança leve ou moderada, por diferença entre o total e a parcela grave. 75,8% tinham segurança alimentar.</desc>
+<g font-family="Arial, sans-serif">
+<rect x="42" y="76" width="676" height="1" rx="0" fill="#7ba77f"/>
+<text x="42" y="112" font-size="19" fill="#ede9bb" font-weight="700" text-anchor="start">BRASIL · 2024</text>
+<text x="42" y="156" font-size="33" fill="#fff6c5" font-weight="700" text-anchor="start">Quase 1 em cada 4 lares foi afetado</text>
+<text x="42" y="243" font-size="69" fill="#ffb3a3" font-weight="700" text-anchor="start">18,9 milhões</text>
+<text x="42" y="280" font-size="24" fill="#fff6c5" font-weight="400" text-anchor="start">de domicílios com algum grau de insegurança alimentar</text>
+<rect x="42" y="315" width="676" height="30" rx="6" fill="#a6caa5"/>
+<rect x="42" y="315" width="21.632" height="30" rx="0" fill="#ffb3a3"/>
+<rect x="63.632000000000005" y="315" width="141.96" height="30" rx="0" fill="#ffcb62"/>
+<rect x="42" y="373" width="17" height="17" rx="3" fill="#ffb3a3"/>
+<text x="73" y="389" font-size="22" fill="#fff6c5" font-weight="700" text-anchor="start">3,2%</text>
+<text x="164" y="389" font-size="22" fill="#fff6c5" font-weight="400" text-anchor="start">Insegurança alimentar grave</text>
+<rect x="42" y="410" width="17" height="17" rx="3" fill="#ffcb62"/>
+<text x="73" y="426" font-size="22" fill="#fff6c5" font-weight="700" text-anchor="start">21,0%*</text>
+<text x="164" y="426" font-size="22" fill="#fff6c5" font-weight="400" text-anchor="start">Insegurança alimentar leve ou moderada</text>
+<rect x="42" y="447" width="17" height="17" rx="3" fill="#a6caa5"/>
+<text x="73" y="463" font-size="22" fill="#fff6c5" font-weight="700" text-anchor="start">75,8%</text>
+<text x="164" y="463" font-size="22" fill="#fff6c5" font-weight="400" text-anchor="start">Segurança alimentar</text>
+<text x="42" y="492" font-size="17" fill="#ede9bb" font-weight="400" text-anchor="start">* Diferença entre o total com insegurança (24,2%) e o grau grave (3,2%).</text>
+<rect x="42" y="510" width="676" height="1" rx="0" fill="#7ba77f"/>
+<text x="42" y="544" font-size="19" fill="#ede9bb" font-weight="400" text-anchor="start">Fonte  ·  IBGE, PNAD Contínua — Segurança Alimentar 2024</text>
+</g></svg>

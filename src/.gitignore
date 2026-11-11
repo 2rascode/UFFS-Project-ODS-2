@@ -1,5 +1,3 @@
-gitignore
-
 # Dependências instaladas pelo npm
 node_modules/
 
