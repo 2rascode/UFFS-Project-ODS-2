@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+
 @font-face {
     font-family: "milesdane";
     src: url("../assets/fonts/MilesdaneRegular.woff") format("woff"),
@@ -14,4 +15,17 @@
   --font-serif: 'Sagoe UI', sans-serif; 
   --font-milesdane: 'milesdane', sans-serif; 
   --font-arial: 'Arial', sans-serif; 
+}
+
+@keyframes grad-bg {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+#mapa:has(#mapa-regiao-2:target) #painel-regiao-2 {
+  display: block;
 }

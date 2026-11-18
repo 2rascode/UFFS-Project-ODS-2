@@ -1,58 +1,121 @@
-# 🏣 UFFS-Project: Mapa Solidário
+# Mapa Solidário - UFFS / ODS 2
 
-ODS2 é uma plataforma web informativa alinhada à ODS 2 - Fome Zero e Agricultura Sustentável. O projeto busca conscientizar sobre a insegurança alimentar, apresentar dados de regiões vulneráveis e conectar pessoas a ONGs e iniciativas sociais de combate à fome.
+Landing page acadêmica sobre insegurança alimentar e iniciativas de solidariedade, desenvolvida na disciplina de Introdução ao Desenvolvimento Web do curso de Ciência da Computação da Universidade Federal da Fronteira Sul (UFFS), Campus Chapecó.
 
-## **Objetivo**
+O projeto relaciona a apresentação de dados ao **Objetivo de Desenvolvimento Sustentável 2 — Fome Zero e Agricultura Sustentável**, com foco na Meta 2.1: acesso à alimentação segura, nutritiva e suficiente.
 
-Facilitar o acesso a informações sobre a insegurança alimentar, permitindo que os visitantes conheçam indicadores sociais, identifiquem regiões vulneráveis e descubram organizações que promovem ações de assistência alimentar.
-O projeto está especialmente alinhado à Meta 2.1 da ODS 2, que busca acabar com a fome e garantir o acesso à alimentação adequada para todas as pessoas até 2030.
+## Objetivo
 
-## **Abrangência**
+Facilitar o acesso a informações sobre insegurança alimentar, permitir a identificação de localidades vulneráveis e incentivar o conhecimento de organizações e iniciativas de assistência alimentar.
 
-Inicialmente, o projeto terá como recorte geográfico o estado de Pernambuco, com destaque para Recife e municípios próximos.
-As informações apresentadas serão fundamentadas em fontes oficiais, como o IBGE e o Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS).
+O site tem caráter informativo e educativo. A divulgação de organizações e das formas de ajudar faz parte da proposta, mas essas seções ainda estão em construção.
 
-## **Estrutura da Landing Page**
+## Abrangência
 
-O site será organizado em cinco seções principais:
+O recorte principal é **Pernambuco**, incluindo Recife e outros municípios do estado. Gráficos nacionais e regionais contextualizam o tema.
 
-Início: *apresentação do projeto e sua proposta de conscientização.*
-O Problema: *contextualização da insegurança alimentar, carta ao visitante e indicadores estatísticos.*
-Mapeamento: *representação das regiões selecionadas, acompanhada de indicadores e informações oficiais.*
-ONGs e Iniciativas: *apresentação de organizações sociais, suas atividades, localizações e canais de contato ou doação.*
-Como Ajudar: *orientações sobre doações, voluntariado e apoio às iniciativas existentes.*
+O mapa apresenta as cinco regiões brasileiras, mas a tabela municipal disponível é a de Pernambuco, acessada pela região Nordeste. As demais regiões exibem uma indicação para consultar esse recorte.
 
-## **Tecnologias**
+## Estrutura e estágio atual
 
-O desenvolvimento está previsto com as seguintes tecnologias:
+| Seção | Identificador | Conteúdo e situação |
+| --- | --- | --- |
+| Início | `#hero` | Apresentação do Mapa Solidário, vídeo de fundo e chamadas para exploração. |
+| Apresentação de dados | `#dados` | Texto de sensibilização e três gráficos em SVG sobre Brasil, regiões brasileiras e a atuação do Mesa Brasil em Pernambuco. |
+| Mapa do Brasil | `#mapa` | Mapa SVG navegável por região e tabela expansível de municípios de Pernambuco. |
+| Organizações e projetos | `#ongs` | Estrutura visual criada; conteúdo ainda não preenchido. |
+| Como ajudar | `#como-ajudar` | Estrutura visual criada; conteúdo ainda não preenchido. |
+| Rodapé | `#footer` | Estrutura criada; conteúdo ainda não preenchido. |
 
-HTML5: estruturação semântica do conteúdo.
-CSS3: estilização, responsividade e animações.
-Tailwind CSS: utilização de classes utilitárias para construção da interface, com CSS previamente compilado.
+O cabeçalho fixo possui um menu lateral com links internos. O botão **Explorar Mapa** aponta para o mapa; **Buscar Iniciativas** ainda utiliza `href="#"`, sem um destino específico.
 
+## Recursos implementados
 
-## **Funcionalidades previstas**
+- Menu lateral controlado por checkbox e componentes CSS do daisyUI.
+- Navegação entre regiões por âncoras, `:target`, `:has()` e variantes do Tailwind.
+- Tabela de Pernambuco com município, famílias em risco e percentual no CadÚnico, organizada do maior percentual para o menor.
+- Abertura e fechamento da tabela com os elementos nativos `details` e `summary`.
+- Gráficos estáticos em SVG e vídeo local na apresentação.
+- Layouts com variantes responsivas e animação de gradiente condicionada a `motion-safe`.
 
-- Navegação por âncoras entre as seções.
-- Layout responsivo para dispositivos móveis e computadores.
-- Animações e transições CSS.
-- Apresentação de indicadores com fontes oficiais.
-- Representação visual das regiões selecionadas.
-- Catálogo informativo de ONGs e iniciativas sociais.
-- Redirecionamento para canais oficiais de contato e doação.
-*- O cadastro de novas organizações poderá ser considerado em versões futuras.*
+A página não possui JavaScript de aplicação, backend, banco de dados ou atualização automática dos indicadores. Os conteúdos estão nos arquivos HTML e SVG.
 
-## **Fontes de informação**
+## Tecnologias
 
-*Organização das Nações Unidas — ODS 2*
-*Instituto Brasileiro de Geografia e Estatística — IBGE*
-*Ministério do Desenvolvimento e Assistência Social — MDS*
-*Mesa Brasil Sesc Pernambuco*
+| Tecnologia | Uso |
+| --- | --- |
+| HTML | Estrutura, conteúdo, âncoras e controles nativos. |
+| CSS | Tipografia, animações e regras complementares de interação. |
+| Tailwind CSS | Classes utilitárias e geração da folha de estilos. |
+| Tailwind CLI | Compilação de `input.css` para `output.css`. |
+| daisyUI | Componentes como navbar, drawer, menu e botões. |
+| SVG | Mapa e gráficos. |
 
-## **Equipe**
+O `package.json` declara Tailwind CSS e CLI `^4.3.5`, daisyUI `^5.7.50` e nira-ui `^1.27.0`. O nira-ui consta como dependência, mas não possui importação explícita nos arquivos HTML e CSS consultados.
 
-[Ruan Both](https://github.com/2rascode)
-[David Sulbaran](https://github.com/Davidalcantara-coder)
+## Organização dos arquivos
 
-*Instituição:* **Universidade Federal da Fronteira Sul (UFFS)**
-*Ano:* **2026**
+| Caminho | Finalidade |
+| --- | --- |
+| `Readme.md` | Documentação geral do projeto. |
+| `PALETA_DE_CORES.md` | Paleta utilizada e sua relação com a psicologia das cores. |
+| `src/Index.html` | Página principal, mapa e tabela municipal. |
+| `src/css/input.css` | Entrada do Tailwind, plugin daisyUI, fontes e CSS personalizado. |
+| `src/css/output.css` | Folha de estilos compilada, carregada pela página. |
+| `src/assets/fonts/` | Arquivos locais da fonte Milesdane. |
+| `src/assets/icons/` | Ícones do projeto. |
+| `src/assets/img/` | Marca e gráficos SVG. |
+| `src/assets/video/` | Vídeo de fundo. |
+| `src/package.json` | Dependências do projeto. |
+| `src/package-lock.json` | Registro das versões das dependências. |
+
+## Como visualizar
+
+Abra `src/Index.html` em um navegador moderno. A folha `src/css/output.css` já está presente no projeto.
+
+Também é possível abrir a página por um servidor estático local, como o Live Server do VS Code. Preserve o nome `Index.html`, com inicial maiúscula, ao informar o caminho em ambientes que diferenciam maiúsculas de minúsculas.
+
+## Como recompilar os estilos
+
+É necessário ter Node.js e npm disponíveis. No terminal, a partir da raiz do repositório:
+
+```powershell
+cd src
+npm ci
+npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --watch
+```
+
+O modo `--watch` mantém a compilação ativa durante as alterações. Para gerar a folha uma única vez:
+
+```powershell
+npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --minify
+```
+
+Os comandos de compilação devem ser executados dentro de `src`. O projeto não define scripts npm como `npm start` ou `npm run dev`.
+
+## Dados e fontes
+
+As seguintes fontes estão identificadas nos materiais da página:
+
+- **IBGE — PNAD Contínua, Segurança Alimentar 2024:** contexto nacional e regional nos gráficos.
+- **MDS — Brasil Sem Fome:** referência complementar indicada no gráfico regional.
+- **Sesc Mesa Brasil Pernambuco:** balanço identificado no terceiro gráfico como publicado em 29 de setembro de 2026.
+- **IBGE — malhas territoriais:** referência dos limites regionais, com [link presente na página](https://servicodados.ibge.gov.br/api/docs/malhas?versao=3).
+
+A tabela municipal apresenta famílias em risco e percentual no CadÚnico. Esses indicadores possuem um universo diferente dos percentuais de domicílios da PNAD; não devem ser interpretados como uma única série diretamente comparável. A origem específica e a data de referência da tabela precisam acompanhar sua documentação.
+
+Esta descrição registra o conteúdo dos arquivos; não representa uma validação independente dos números apresentados.
+
+## Identidade visual
+
+A identidade combina verdes, oliva, amarelos e tons terrosos, relacionados visualmente à agricultura, ao alimento e à solidariedade. A fonte Milesdane aparece na marca e nos títulos; Arial é utilizada em textos.
+
+Consulte [Paleta de cores e psicologia das cores](./PALETA_DE_CORES.md) para os valores registrados no código, as aplicações e a justificativa conceitual.
+
+## Autoria e contexto acadêmico
+
+**Autores:** David Sulbaran e Ruan Arthur Both.  
+**Instituição:** Universidade Federal da Fronteira Sul — Campus Chapecó.  
+**Curso:** Ciência da Computação.  
+**Disciplina:** Introdução ao Desenvolvimento Web.  
+**Ano:** 2026.
