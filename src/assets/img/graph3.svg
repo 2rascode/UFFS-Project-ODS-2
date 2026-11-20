@@ -2,8 +2,6 @@
 <title id="titulo">Uma rede que põe comida na mesa</title>
 <desc id="descricao">O Sesc Mesa Brasil já havia distribuído mais de 1,1 milhão de quilos de alimentos em Pernambuco em 2026 quando publicou o balanço de setembro. A rede contava com 336 instituições cadastradas que atendiam mais de 103 mil pessoas em 50 municípios.</desc>
 <g font-family="Arial, sans-serif">
-<text x="42" y="57" font-size="19" fill="#c8ec84" font-weight="700" text-anchor="start">MAPA SOLIDÁRIO  /  ODS 2 · META 2.1</text>
-<text x="718" y="57" font-size="19" fill="#c8ec84" font-weight="700" text-anchor="end">03 / 03</text>
 <rect x="42" y="76" width="676" height="1" rx="0" fill="#7ba77f"/>
 <text x="42" y="112" font-size="19" fill="#ede9bb" font-weight="700" text-anchor="start">PERNAMBUCO · BALANÇO PUBLICADO EM SETEMBRO DE 2026</text>
 <text x="42" y="156" font-size="33" fill="#fff6c5" font-weight="700" text-anchor="start">Uma rede que põe comida na mesa</text>
