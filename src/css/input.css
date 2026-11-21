@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@source "../Index.html";
 
 
 @font-face {
@@ -17,15 +18,143 @@
   --font-arial: 'Arial', sans-serif; 
 }
 
-@keyframes grad-bg {
-  from {
-    background-position: 0% 50%;
-  }
-  to {
-    background-position: 100% 50%;
-  }
+@layer base {
+  html { scroll-padding-top: 5.5rem; }
+  body { min-width: 0; }
 }
 
-#mapa:has(#mapa-regiao-2:target) #painel-regiao-2 {
-  display: block;
+/* Componentes e seções */
+@layer components {
+  .site-header { @apply fixed top-0 z-50 flex w-full flex-col items-center justify-center; }
+  .site-navbar { @apply bg-olive-800 shadow-sm; }
+  .hero-section { @apply relative isolate flex min-h-screen flex-col items-center justify-center overflow-hidden; }
+  .hero-content-wrapper { @apply relative z-20 flex w-full flex-col items-center px-4 text-center; }
+  .hero-welcome { @apply mt-1 font-serif font-bold text-amber-400; }
+  .hero-title { @apply mt-1 font-milesdane text-yellow-100; }
+  .hero-description { @apply mt-4 font-arial text-amber-100; }
+  .data-section { @apply flex min-h-screen w-full flex-col items-center justify-center; }
+  .data-title { @apply mt-4 text-center font-milesdane text-yellow-100; }
+  .data-description { @apply mx-auto mt-8 text-center font-arial text-amber-100/80; }
+  .data-charts { @apply mx-auto my-3 grid w-full grid-cols-1 gap-4; }
+  .map-section { @apply min-h-screen w-full bg-green-800 px-4 py-25 text-yellow-100; }
+  .map-title { @apply mt-2 font-milesdane; }
+  .map-layout { @apply my-6 grid items-start gap-6; }
+  .brazil-map { @apply mx-auto h-auto w-full max-w-xl; }
+  .map-panel { @apply min-w-0 rounded-xl bg-green-950 p-4 md:p-5; }
+  .map-source { @apply mt-3 text-sm; }
+  .region-link { @apply mt-3 inline-block font-semibold text-amber-300 underline; }
+  .table-scroll { @apply mt-2 max-h-80 overflow-auto text-yellow-100; }
+  .municipal-table { @apply w-full border-collapse text-left text-sm; }
+  .organizations-section { @apply min-h-screen w-full px-6 py-16; }
+  .organizations-title { @apply mt-16 font-milesdane text-green-900; }
+  .organizations-subtitle { @apply font-milesdane text-green-950; }
+  .organizations-grid { @apply flex flex-wrap items-stretch justify-center gap-10 text-amber-200; }
+  .organization-card { @apply bg-olive-800 shadow-md; }
+  .help-section { @apply flex min-h-screen w-full flex-col items-center justify-center gap-4 bg-green-800; }
+  .help-content { @apply flex w-full flex-col items-center justify-center gap-4 px-6 py-16; }
+  .help-title { @apply mt-10 font-milesdane text-amber-200; }
+  .help-subtitle { @apply font-milesdane text-amber-500; }
+  .site-footer { @apply w-full bg-green-900 px-6 py-10 text-amber-200; }
+  .footer-columns { @apply grid gap-8; }
+  .footer-bottom { @apply mt-8 flex flex-col items-center justify-between gap-3 border-t border-amber-200/20 pt-4 text-center text-sm md:flex-row; }
+  .site-brand { width: auto; flex: 1; min-width: 0; }
+  .site-brand > img { flex-shrink: 0; }
+  .site-brand-title { @apply font-bold font-milesdane text-yellow-100; font-size: clamp(1.125rem, 4.5vw, 1.5rem); }
+  .site-menu-toggle { width: auto; flex-shrink: 0; }
+  .site-menu-toggle .drawer { width: auto; }
+  .sidebar-panel { @apply flex min-h-dvh flex-col bg-olive-800 p-4 text-amber-400; width: min(20rem, 100vw); }
+  .sidebar-logo { @apply flex items-center justify-center; }
+  .sidebar-links { @apply m-5 p-0; width: auto; }
+  .sidebar-links a { white-space: normal; }
+  .sidebar-links svg { flex-shrink: 0; }
+  .sidebar-copyright { @apply mt-auto px-4 pt-6 pb-2 text-center text-xs; }
+  .hero-section { min-height: 100svh; padding-block: 7rem 3rem; }
+  .hero-content-wrapper { max-width: 90rem; }
+  .hero-welcome { font-size: clamp(1.5rem, 4vw, 2.25rem); }
+  .hero-title { font-size: clamp(3rem, 9vw, 8rem); line-height: 1; max-width: 100%; }
+  .hero-description { font-size: clamp(1rem, 2vw, 1.125rem); }
+  .hero-welcome, .hero-title, .hero-description { text-shadow: 0 2px 6px #0008; }
+  .hero-actions { @apply mt-6 flex flex-wrap items-center justify-center gap-4; }
+  .hero-actions .btn, .help-content .btn { height: auto; min-height: 2.5rem; white-space: normal; padding-block: .65rem; }
+  .hero-actions svg { flex-shrink: 0; }
+  .data-section { padding: 4rem 1rem; }
+  .data-section, .organizations-section { background-image: linear-gradient(110deg, #ccb366, #8d871b, #ccb366); background-size: 250% 100%; background-position: center; }
+  .data-title, .organizations-title, .help-title { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; }
+  .data-title { text-shadow: 0 4px 8px #0008; }
+  .data-description { max-width: 70rem; font-size: clamp(1rem, 2vw, 1.5rem); text-shadow: 0 2px 5px #0008; }
+  .data-charts { max-width: 96rem; }
+  .data-charts img { min-width: 0; }
+  .map-title { font-size: clamp(2.25rem, 5vw, 3.75rem); line-height: 1.1; }
+  .map-layout > * { min-width: 0; }
+  .map-source a { text-decoration: underline; }
+  .regiao { @apply cursor-pointer fill-lime-300; }
+  .region-shape { @apply stroke-green-950; stroke-width: 1.5; }
+  .region-label { @apply pointer-events-none fill-green-950 text-sm font-bold; }
+  .regiao:focus-visible .region-shape { stroke: white; }
+  .painel-regiao { display: none; }
+  .map-section:has(.marcador-regiao:target) .map-placeholder { display: none; }
+  .table-scroll { max-width: 100%; overscroll-behavior: contain; }
+  .municipal-table { min-width: 25rem; }
+  .municipal-table th, .municipal-table td { @apply border-b border-yellow-100/20 p-2; }
+  .municipal-table tbody th { font-weight: 400; }
+  .municipal-table td { text-align: right; font-variant-numeric: tabular-nums; }
+  .organizations-subtitle, .help-subtitle { font-size: clamp(1.125rem, 2.5vw, 1.5rem); }
+  .organization-card { width: min(24rem, 100%); min-height: 30rem; }
+  .organization-image { @apply h-56 w-full overflow-hidden; flex-shrink: 0; }
+  .organization-card .card-body { min-width: 0; }
+  .organization-card .card-actions { margin-top: auto; }
+  .help-title { text-shadow: 0 4px 8px #d97706; }
+  .help-content { max-width: 80rem; }
+  .footer-columns > * { min-width: 0; }
+  .footer-brand { @apply flex items-center gap-3; }
+  .footer-brand img { flex-shrink: 0; }
+  .footer-brand-title { @apply font-milesdane text-yellow-100; font-size: clamp(1.5rem, 4vw, 1.875rem); }
+}
+
+/* Seleção do mapa - futriqueira do djabo pra não usar javascript (pfv professor, considera aí) */
+#mapa:has(#mapa-regiao-1:target) #painel-regiao-1 { display: block; }
+#mapa:has(#mapa-regiao-1:target) .regiao[href="#mapa-regiao-1"] { fill: var(--color-amber-300); }
+#mapa:has(#mapa-regiao-1:target) .regiao:not([href="#mapa-regiao-1"]) { opacity: .4; }
+#mapa:has(#mapa-regiao-2:target) #painel-regiao-2 { display: block; }
+#mapa:has(#mapa-regiao-2:target) .regiao[href="#mapa-regiao-2"] { fill: var(--color-amber-300); }
+#mapa:has(#mapa-regiao-2:target) .regiao:not([href="#mapa-regiao-2"]) { opacity: .4; }
+#mapa:has(#mapa-regiao-3:target) #painel-regiao-3 { display: block; }
+#mapa:has(#mapa-regiao-3:target) .regiao[href="#mapa-regiao-3"] { fill: var(--color-amber-300); }
+#mapa:has(#mapa-regiao-3:target) .regiao:not([href="#mapa-regiao-3"]) { opacity: .4; }
+#mapa:has(#mapa-regiao-4:target) #painel-regiao-4 { display: block; }
+#mapa:has(#mapa-regiao-4:target) .regiao[href="#mapa-regiao-4"] { fill: var(--color-amber-300); }
+#mapa:has(#mapa-regiao-4:target) .regiao:not([href="#mapa-regiao-4"]) { opacity: .4; }
+#mapa:has(#mapa-regiao-5:target) #painel-regiao-5 { display: block; }
+#mapa:has(#mapa-regiao-5:target) .regiao[href="#mapa-regiao-5"] { fill: var(--color-amber-300); }
+#mapa:has(#mapa-regiao-5:target) .regiao:not([href="#mapa-regiao-5"]) { opacity: .4; }
+
+.regiao:focus-visible { fill: white !important; opacity: 1 !important; }
+@media (hover: hover) {
+  .brazil-map:has(.regiao:hover) .regiao:not(:hover) { opacity: .4; }
+  .regiao:hover { fill: var(--color-amber-300) !important; opacity: 1 !important; }
+}
+
+/* Layout aparece apenas quando há conteúdo */
+@media (min-width: 48rem) {
+  .data-charts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .footer-columns { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); }
+}
+@media (min-width: 64rem) {
+  .map-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-columns { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr); }
+}
+@media (max-width: 30rem) {
+  .site-brand > img { width: 3rem; height: 3rem; }
+  .hero-actions { width: 100%; }
+  .hero-actions .btn { width: 100%; }
+  .organizations-section, .help-content, .site-footer { padding-inline: 1rem; }
+  .organizations-title { margin-top: 0; }
+}
+@keyframes grad-bg {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .data-section, .organizations-section { animation: grad-bg 8s ease-in-out infinite alternate; }
+  .regiao { transition: opacity .15s; }
 }
