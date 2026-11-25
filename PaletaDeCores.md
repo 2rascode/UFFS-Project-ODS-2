@@ -33,6 +33,9 @@ Para textos comuns, a referência é uma relação de contraste de pelo menos 4,
 | Creme `#FEF9C2` | Verde escuro `#016630` | 6,64:1 | Atende ao nível AA. |
 | Creme claro `#FFFBEB` | Amarelo claro `#FFD230` | 1,40:1 | Precisa de ajuste. |
 | Verde muito escuro `#032E15` | Amarelo claro `#FFD230` | 10,33:1 | Alternativa recomendada para o texto do botão. |
+|Laranja âmbar #FE9A00	Verde floresta #0D542B	4,24:1	Um pouco abaixo do AA (botões "Saiba mais")
+|Creme #FEF9C2	Dourado #CCB366	1,91:1	Insuficiente (título da seção de dados)
+|Verde muito escuro #032E15	Dourado #CCB366	7,26:1	Atende ao AA
 
 No botão “Explorar Mapa”, recomenda-se substituir o texto creme claro pelo verde muito escuro. Essa é uma proposta de ajuste; o site não foi alterado. Textos sobre vídeo, gradientes ou fundos transparentes precisam ser conferidos na página, pois o contraste varia conforme a imagem de fundo.
 
