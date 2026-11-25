@@ -12,6 +12,12 @@ O Mapa Solidário utiliza verdes, amarelos e tons terrosos para aproximar sua id
 | Dourado terroso | `#CCB366` | Gradiente das seções de participação. Aproxima essas áreas da ideia de alimento e colheita. |
 | Oliva ocre | `#8D871B` | Complemento do gradiente. Dá continuidade aos tons ligados ao cultivo. |
 | Coral suave | `#FFB3A3` | Destaques nos gráficos sobre insegurança alimentar. Direciona a atenção aos dados de vulnerabilidade. |
+|Verde floresta	#0D542B	Fundo dos botões "Saiba mais" e do rodapé; título das organizações|
+Verde muito escuro	#032E15	Subtítulo das organizações|
+|Âmbar claro	#FEE685	Texto do rodapé e de "Como ajudar"; botões de doação; véu sobre o vídeo|
+|Terracota	#BB4D00 (hover #973C00)	Botão "Buscar Iniciativas"
+|Verde médio	#008236	Botão que abre o menu lateral
+|Verde-limão	#BBF451	Cor padrão das regiões do mapa
 
 Essas associações expressam a intenção visual do projeto. Nos gráficos, as cores são acompanhadas de textos e legendas para facilitar a compreensão dos dados.
 
